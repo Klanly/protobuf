@@ -1,5 +1,5 @@
 configuration:
-  - Debug
+  - Release
 
 environment:
   matrix:
@@ -38,3 +38,10 @@ build_script:
 
 skip_commits:
   message: /.*\[skip appveyor\].*/
+  
+artifacts:
+- path: '**\*.dll'
+- path: '**\*.exe'
+- path: '**\*.lib'
+- path: '**\*.pdb'
+- path: '**\*.obj'
